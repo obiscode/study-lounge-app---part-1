@@ -9,7 +9,7 @@ namespace StudyLounge.Application;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddAppliccation(this IServiceCollection services)
+    public static IServiceCollection AddApplication(this IServiceCollection services)
     {
         return services
         .AddCarter();
@@ -20,10 +20,9 @@ public static class DependencyInjection
         .AddPersistence(configuration)
         .AddIdentityDetails();
     }
-
-    public static IEndpointRouteBuilder MapEndPoints(this IEndpointRouteBuilder builder)
+    public static IEndpointRouteBuilder MapEndpoints(this IEndpointRouteBuilder builder)
     {
-        builder.MapCarter();
-        return builder;
+        return builder.MapCarter();
     }
+
 }
