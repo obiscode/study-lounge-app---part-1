@@ -20,9 +20,7 @@ public static class DependencyInjection
         .AddPersistence(configuration)
         .AddIdentityDetails();
     }
-    public static IEndpointRouteBuilder MapEndpoints(this IEndpointRouteBuilder builder)
-    {
-        return builder.MapCarter();
-    }
+    public static IEndpointRouteBuilder MapEndpoints(this IEndpointRouteBuilder builder) 
+    => builder.MapCarter();
 
 }
